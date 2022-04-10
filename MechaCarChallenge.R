@@ -1,20 +1,17 @@
 library(dplyr)
 
-#Deliverable 1
 mechacar <- read.csv(file='MechaCar_mpg.csv')
 mechacarDF <- as.data.frame(mechacar)
 summary(mechacarDF)
 mpg_eval <- lm(mpg ~ ., data = mechacarDF)
 summary(mpg_eval)
 
-#Deliverable 2
 suspension_coil <- read.csv(file='Suspension_Coil.csv')
 total_summary <- suspension_coil %>% summarize(Mean=mean(PSI), Median=median(PSI), Variance=var(PSI), SD=sd(PSI))
 coil_lot <- suspension_coil %>% group_by(Manufacturing_Lot) %>% summarize(Mean=mean(PSI), Median=median(PSI), Variance=var(PSI), SD=sd(PSI))
 
 t.test(suspension_coil$PSI, mu=15000)
 
-#Deliverable 3
 coil_lot1 <- subset(suspension_coil, Manufacturing_Lot =='Lot1')
 t.test(coil_lot1$PSI, mu=1500)
 
