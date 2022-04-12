@@ -1,4 +1,6 @@
-# MechaCar_Statistical_Analysis
+# MechaCar Statistical Analysis
+## Purpose of Analysis
+In this analysis, vehicle data is analyzed to evaluate a variety of aspects of auto manufacturing. Analysis includes evaluation of predictors of MPG and comparison of suspension coil lots.
 
 ## Linear Regression to Predict MPG
 Linear regression statistics were performed on the MechaCar dataset. Statistics and plots are shown below
