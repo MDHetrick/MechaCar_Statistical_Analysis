@@ -5,7 +5,7 @@
   Using a p-value of < 0.05 as the indicator of significance, vehicle length and ground clearance provided a non-random amount of variance with p values of 2.60e-12 and 5.21e-08, respectively. Vehicle weight, spoiler angle, and AWD provided random amounts of variance with p-values > 0.05.
 - Is the slope of the linear model considered to be zero? Why or why not?
   No the slope of the linear model is not considered to be zero. Some of the individual slopes are closer to zero than others, but even the smallest slope is greater than +/- 3. Additionally, a slope of zero indicates no correlation between the selected response variable (MPG) and the other variables. In this model the multiple R-squared value is 0.7149 which indicates a correlation
-  - Does this linear model predict mpg of MechaCar prototypes effectively? Why or why not?
+- Does this linear model predict mpg of MechaCar prototypes effectively? Why or why not?
   This model consists of multiple predictors and a single outcome variable. With this model, the F-statistic is 22.07 on 5 and 44 DF, resulting in a p-value of 5.35e-11. This p-value is significantly less than the significance limit of p<0.05, indicating that this model predicts mpg effectively.
 ```
 Call:
@@ -133,7 +133,8 @@ mean of x
 The result of this test provides a p-value = 0.04168, with a mean = 1496.14, which indicates that the difference in PSI of lot 3 is statistically different from the population mean of 1500.
 
 
-## Study Design: MechaCar vs. Competition
+## Study Design: 
+### MechaCar vs. Competition
 Write a short description of a statistical study that can quantify how the MechaCar performs against the competition. In your study design, think critically about what metrics would be of interest to a consumer: for a few examples, cost, city or highway fuel efficiency, horse power, maintenance cost, or safety rating.
 In your description, address the following questions:
 - What metric or metrics are you going to test?
@@ -142,7 +143,8 @@ Upfront cost, maintenance cost, fuel efficiency, safety rating, and customer sat
 Null: MechaCar is same as competition for all metrics evaluated. 
 Alternative: MechaCar mean upfront cost, and maintenance cost is less than competition; MechaCar fuel efficiency, safety rating, and customer satisfaction rating is greater than competition
 - What statistical test would you use to test the hypothesis? And why?
-For each metric: T-Test comparing MechaCar to competition (population mean)
-An additional test could be to compare linear regression statistics with customer satisfaction ranking as the response and the other metrics as the independent variables to determine if customer satisfaction can be predicted by the metrics evaluated.
+For each metric: T-Test comparing MechaCar to competition (population mean). I would select this test because it is a test used to compare the means fo two groups to determine if there is a significant difference.
 - What data is needed to run the statistical test?
 MechaCar data for all metrics; Competitor's mean data for each metric
+
+
