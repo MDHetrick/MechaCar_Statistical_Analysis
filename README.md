@@ -115,13 +115,14 @@ The result of this test provides a p-value = 0.04168, with a mean = 1496.14, whi
 Write a short description of a statistical study that can quantify how the MechaCar performs against the competition. In your study design, think critically about what metrics would be of interest to a consumer: for a few examples, cost, city or highway fuel efficiency, horse power, maintenance cost, or safety rating.
 In your description, address the following questions:
 - What metric or metrics are you going to test?
-Upfront cost, maintenance cost, fuel efficiency, safety rating, and customer satisfaction ranking
+  - Upfront cost, maintenance cost, fuel efficiency, safety rating, and customer satisfaction ranking
 - What is the null hypothesis or alternative hypothesis?
-Null: MechaCar is same as competition for all metrics evaluated. 
-Alternative: MechaCar mean upfront cost, and maintenance cost is less than competition; MechaCar fuel efficiency, safety rating, and customer satisfaction rating is greater than competition
+  - Null: MechaCar is same as competition for all metrics evaluated. 
+  - Alternative: MechaCar mean upfront cost, and maintenance cost is less than competition; MechaCar fuel efficiency, safety rating, and customer satisfaction rating is greater than competition
 - What statistical test would you use to test the hypothesis? And why?
-For each metric: T-Test comparing MechaCar to competition (population mean). I would select this test because it is a test used to compare the means fo two groups to determine if there is a significant difference.
+  - For each metric: T-Test comparing MechaCar to competition (population mean). I would select this test because it is a test used to compare the means fo two groups to determine if there is a significant difference.
 - What data is needed to run the statistical test?
-MechaCar data for all metrics; Competitor's mean data for each metric
+  - MechaCar data for all metrics
+  - Competitor's mean data for each metric
 
 
