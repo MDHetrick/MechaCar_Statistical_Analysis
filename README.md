@@ -1,15 +1,8 @@
 # MechaCar_Statistical_Analysis
 
 ## Linear Regression to Predict MPG
-**Which variables/coefficients provided a non-random amount of variance to the mpg values in the dataset?**
+Linear regression statistics were performed on the MechaCar dataset. Statistics and plots are shown below
 
-Using a p-value of < 0.05 as the indicator of significance, vehicle length and ground clearance provided a non-random amount of variance with p values of 2.60e-12 and 5.21e-08, respectively. Vehicle weight, spoiler angle, and AWD provided random amounts of variance with p-values > 0.05.
-**Is the slope of the linear model considered to be zero? Why or why not?**
-
-No the slope of the linear model is not considered to be zero. Some of the individual slopes are closer to zero than others, but even the smallest slope is greater than +/- 3. Additionally, a slope of zero indicates no correlation between the selected response variable (MPG) and the other variables. In this model the multiple R-squared value is 0.7149 which indicates a correlation
-**Does this linear model predict mpg of MechaCar prototypes effectively? Why or why not?**
-
-This model consists of multiple predictors and a single outcome variable. With this model, the F-statistic is 22.07 on 5 and 44 DF, resulting in a p-value of 5.35e-11. This p-value is significantly less than the significance limit of p<0.05, indicating that this model predicts mpg effectively.
 ```
 Call:
 lm(formula = mpg ~ ., data = mechacarDF)
@@ -17,7 +10,8 @@ lm(formula = mpg ~ ., data = mechacarDF)
 Coefficients:
      (Intercept)    vehicle_length    vehicle_weight     spoiler_angle  ground_clearance               AWD  
       -1.040e+02         6.267e+00         1.245e-03         6.877e-02         3.546e+00        -3.411e+00  
-
+```
+```
 Call:
 lm(formula = mpg ~ ., data = mechacarDF)
 
@@ -52,6 +46,21 @@ F-statistic: 22.07 on 5 and 44 DF,  p-value: 5.35e-11
 ![image](https://github.com/MDHetrick/MechaCar_Statistical_Analysis/blob/main/resources/AWD.png)
 
 
+With the linear regression results, the following questions were answered:
+
+**Which variables/coefficients provided a non-random amount of variance to the mpg values in the dataset?**
+
+Using a p-value of < 0.05 as the indicator of significance, vehicle length and ground clearance provided a non-random amount of variance with p values of 2.60e-12 and 5.21e-08, respectively. Vehicle weight, spoiler angle, and AWD provided random amounts of variance with p-values > 0.05.
+
+**Is the slope of the linear model considered to be zero? Why or why not?**
+
+No the slope of the linear model is not considered to be zero. Some of the individual slopes are closer to zero than others, but even the smallest slope is greater than +/- 3. Additionally, a slope of zero indicates no correlation between the selected response variable (MPG) and the other variables. In this model the multiple R-squared value is 0.7149 which indicates a correlation
+
+**Does this linear model predict mpg of MechaCar prototypes effectively? Why or why not?**
+
+This model consists of multiple predictors and a single outcome variable. With this model, the F-statistic is 22.07 on 5 and 44 DF, resulting in a p-value of 5.35e-11. This p-value is significantly less than the significance limit of p<0.05, indicating that this model predicts mpg effectively.
+
+
 ## Summary Statistics
 The design specifications for the MechaCar suspension coils dictate that the variance of the suspension coils must not exceed 100 pounds per square inch. Does the current manufacturing data meet this design specification for all manufacturing lots in total and each lot individually? Why or why not?
 
@@ -76,7 +85,7 @@ The purpose of this analysis is to determine if the PSI across all manufacturing
 
 A t-test was performed to compare PSI across all manufacturing lots to the populaiton mean of 1500 PSI.
 
-![image](https://github.com/MDHetrick/MechaCar_Statistical_Analysis/blob/main/resources/all_lot_t.png)
+![image](https://github.com/MDHetrick/MechaCar_Statistical_Analysis/blob/main/resources/all_lots.png)
 
 The result of this test provides a p-value < 0.06028, with a mean = 1498.78, which indicates that the mean PSI across all lots is not statistically different from the population mean of 1500 PSI.
 
