@@ -1,12 +1,15 @@
 # MechaCar_Statistical_Analysis
 
 ## Linear Regression to Predict MPG
-- Which variables/coefficients provided a non-random amount of variance to the mpg values in the dataset?
-  Using a p-value of < 0.05 as the indicator of significance, vehicle length and ground clearance provided a non-random amount of variance with p values of 2.60e-12 and 5.21e-08, respectively. Vehicle weight, spoiler angle, and AWD provided random amounts of variance with p-values > 0.05.
-- Is the slope of the linear model considered to be zero? Why or why not?
-  No the slope of the linear model is not considered to be zero. Some of the individual slopes are closer to zero than others, but even the smallest slope is greater than +/- 3. Additionally, a slope of zero indicates no correlation between the selected response variable (MPG) and the other variables. In this model the multiple R-squared value is 0.7149 which indicates a correlation
-- Does this linear model predict mpg of MechaCar prototypes effectively? Why or why not?
-  This model consists of multiple predictors and a single outcome variable. With this model, the F-statistic is 22.07 on 5 and 44 DF, resulting in a p-value of 5.35e-11. This p-value is significantly less than the significance limit of p<0.05, indicating that this model predicts mpg effectively.
+**Which variables/coefficients provided a non-random amount of variance to the mpg values in the dataset?**
+
+Using a p-value of < 0.05 as the indicator of significance, vehicle length and ground clearance provided a non-random amount of variance with p values of 2.60e-12 and 5.21e-08, respectively. Vehicle weight, spoiler angle, and AWD provided random amounts of variance with p-values > 0.05.
+**Is the slope of the linear model considered to be zero? Why or why not?**
+
+No the slope of the linear model is not considered to be zero. Some of the individual slopes are closer to zero than others, but even the smallest slope is greater than +/- 3. Additionally, a slope of zero indicates no correlation between the selected response variable (MPG) and the other variables. In this model the multiple R-squared value is 0.7149 which indicates a correlation
+**Does this linear model predict mpg of MechaCar prototypes effectively? Why or why not?**
+
+This model consists of multiple predictors and a single outcome variable. With this model, the F-statistic is 22.07 on 5 and 44 DF, resulting in a p-value of 5.35e-11. This p-value is significantly less than the significance limit of p<0.05, indicating that this model predicts mpg effectively.
 ```
 Call:
 lm(formula = mpg ~ ., data = mechacarDF)
@@ -38,17 +41,32 @@ Multiple R-squared:  0.7149,	Adjusted R-squared:  0.6825
 F-statistic: 22.07 on 5 and 44 DF,  p-value: 5.35e-11
 
 ```
+![image](https://github.com/MDHetrick/MechaCar_Statistical_Analysis/blob/main/resources/vehicle_length.png)
+
+![image](https://github.com/MDHetrick/MechaCar_Statistical_Analysis/blob/main/resources/vehicle_weight.png)
+
+![image](https://github.com/MDHetrick/MechaCar_Statistical_Analysis/blob/main/resources/spoiler_angle.png)
+
+![image](https://github.com/MDHetrick/MechaCar_Statistical_Analysis/blob/main/resources/ground_clearance.png)
+
+![image](https://github.com/MDHetrick/MechaCar_Statistical_Analysis/blob/main/resources/AWD.png)
+
+
 ## Summary Statistics
 The design specifications for the MechaCar suspension coils dictate that the variance of the suspension coils must not exceed 100 pounds per square inch. Does the current manufacturing data meet this design specification for all manufacturing lots in total and each lot individually? Why or why not?
 
-### Suspension Coil Summary
+#### Suspension Coil Summary
 The suspension coil information was summarized in a table, shown below
-![image](suspension_coil)
+
+![image](https://github.com/MDHetrick/MechaCar_Statistical_Analysis/blob/main/resources/suspension_coil_summary.png)
+
 The suspension coil variance is 62.3 PSI, which is less than 100 PSI. The manufacturing data for this design specification meets requirements for all lots when evaluated together.  
 
-### Suspension Coil Lot Summary
+#### Suspension Coil Lot Summary
 Suspension coil information by lot was also summarized, as shown below
-![image](suspension_coil)
+
+![image](https://github.com/MDHetrick/MechaCar_Statistical_Analysis/blob/main/resources/coil_lot_summary.png)
+
 The variances of lot1 and lot2 meet design specifications with variances of < 100 PSI. Lot 3 does not meet requirements with a variance of > 100 PSI.
 
 
@@ -56,85 +74,35 @@ The variances of lot1 and lot2 meet design specifications with variances of < 10
 ## T-Tests on Suspension Coils
 The purpose of this analysis is to determine if the PSI across all manufacturing lots is statistically different from the population mean of 1,500 pounds per square inch as well as if the PSI for each manufacturing lot is statistically different from the population mean of 1,500 pounds per square inch.
 
-
 A t-test was performed to compare PSI across all manufacturing lots to the populaiton mean of 1500 PSI.
-```
-> t.test(suspension_coil$PSI, mu=1500)
 
-	One Sample t-test
+![image](https://github.com/MDHetrick/MechaCar_Statistical_Analysis/blob/main/resources/all_lot_t.png)
 
-data:  suspension_coil$PSI
-t = -1.8931, df = 149, p-value = 0.06028
-alternative hypothesis: true mean is not equal to 1500
-95 percent confidence interval:
- 1497.507 1500.053
-sample estimates:
-mean of x 
-  1498.78 
-```
 The result of this test provides a p-value < 0.06028, with a mean = 1498.78, which indicates that the mean PSI across all lots is not statistically different from the population mean of 1500 PSI.
 
 
 A t-test was performed to compare PSI of suspension coil lot 1 to the populaiton mean of 1500 PSI.
-```
-> coil_lot1 <- subset(suspension_coil, Manufacturing_Lot =='Lot1')
-> t.test(coil_lot1$PSI, mu=1500)
 
-	One Sample t-test
+![image](https://github.com/MDHetrick/MechaCar_Statistical_Analysis/blob/main/resources/lot1t.png)
 
-data:  coil_lot1$PSI
-t = 0, df = 49, p-value = 1
-alternative hypothesis: true mean is not equal to 1500
-95 percent confidence interval:
- 1499.719 1500.281
-sample estimates:
-mean of x 
-     1500 
-```
 The result of this test provides a p-value = 1, with a mean = 1500, which indicates that the difference in PSI of lot 1 is not statistically different from the population mean of 1500.
 
 
 A t-test was performed to compare PSI of suspension coil lot 2 to the populaiton mean of 1500 PSI.
-```
-> coil_lot2 <- subset(suspension_coil, Manufacturing_Lot =='Lot2')
-> t.test(coil_lot2$PSI, mu=1500)
 
-	One Sample t-test
+![image](https://github.com/MDHetrick/MechaCar_Statistical_Analysis/blob/main/resources/lot2t.png)
 
-data:  coil_lot2$PSI
-t = 0.51745, df = 49, p-value = 0.6072
-alternative hypothesis: true mean is not equal to 1500
-95 percent confidence interval:
- 1499.423 1500.977
-sample estimates:
-mean of x 
-   1500.2 
-```
 The result of this test provides a p-value = 0.6072, with a mean = 1500.1, which indicates that the difference in PSI of lot 2 is not statistically different from the population mean of 1500.
 
 
 
-A t-test was performed to compare PSI of suspension coil lot 3 to the populaiton mean of 1500 PSI.
-```
-> coil_lot3 <- subset(suspension_coil, Manufacturing_Lot =='Lot3')
-> t.test(coil_lot3$PSI, mu=1500)
+A t-test was performed to compare PSI of suspension coil lot 3 to the population mean of 1500 PSI.
+![image](https://github.com/MDHetrick/MechaCar_Statistical_Analysis/blob/main/resources/lot3t.png)
 
-	One Sample t-test
-
-data:  coil_lot3$PSI
-t = -2.0916, df = 49, p-value = 0.04168
-alternative hypothesis: true mean is not equal to 1500
-95 percent confidence interval:
- 1492.431 1499.849
-sample estimates:
-mean of x 
-  1496.14 
-```
 The result of this test provides a p-value = 0.04168, with a mean = 1496.14, which indicates that the difference in PSI of lot 3 is statistically different from the population mean of 1500.
 
 
-## Study Design: 
-### MechaCar vs. Competition
+## Study Design: MechaCar vs. Competition
 Write a short description of a statistical study that can quantify how the MechaCar performs against the competition. In your study design, think critically about what metrics would be of interest to a consumer: for a few examples, cost, city or highway fuel efficiency, horse power, maintenance cost, or safety rating.
 In your description, address the following questions:
 - What metric or metrics are you going to test?
