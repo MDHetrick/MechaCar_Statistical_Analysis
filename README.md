@@ -119,12 +119,13 @@ In your description, address the following questions:
 - What metric or metrics are you going to test?
   - Upfront cost, maintenance cost, fuel efficiency, safety rating, and customer satisfaction ranking
 - What is the null hypothesis or alternative hypothesis?
-  - Null: MechaCar is same as competition for all metrics evaluated. 
-  - Alternative: MechaCar mean upfront cost, and maintenance cost is less than competition; MechaCar fuel efficiency, safety rating, and customer satisfaction rating is greater than competition
+  - Null: For each metric, the difference in means between MechaCar and the competitor is equal to zero
+  - Alternative: For each metric, the true difference in means between MechaCar and the competitor is not equal to zero
 - What statistical test would you use to test the hypothesis? And why?
-  - For each metric: T-Test comparing MechaCar to competition (population mean). I would select this test because it is a test used to compare the means fo two groups to determine if there is a significant difference.
+  - For each metric: T-Test comparing MechaCar to competition. I would select this test because it is a test used to compare the means for two groups to determine if there is a significant difference. This test would provide the following information: t, df, p-value, 95 percent confidence interval, sample mean estimates. With the t-test results, we could look at the p-value for significance (p<0.05) when comparing the sample means.
+
 - What data is needed to run the statistical test?
   - MechaCar data for each metric
-  - Competitor's mean data for each metric
+  - Competitor's data for each metric
 
 
