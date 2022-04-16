@@ -124,7 +124,7 @@ In your description, address the following questions:
 - What statistical test would you use to test the hypothesis? And why?
   - For each metric: T-Test comparing MechaCar to competition (population mean). I would select this test because it is a test used to compare the means fo two groups to determine if there is a significant difference.
 - What data is needed to run the statistical test?
-  - MechaCar data for all metrics
+  - MechaCar data for each metric
   - Competitor's mean data for each metric
 
 
