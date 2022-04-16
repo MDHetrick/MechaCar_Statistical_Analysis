@@ -17,14 +17,7 @@ Linear regression statistics were performed on the MechaCar dataset.
 ![image](https://github.com/MDHetrick/MechaCar_Statistical_Analysis/blob/main/resources/AWD.png)
 
 ### Mecha Car Linear Regression Statistics
-```
-Call:
-lm(formula = mpg ~ ., data = mechacarDF)
 
-Coefficients:
-     (Intercept)    vehicle_length    vehicle_weight     spoiler_angle  ground_clearance               AWD  
-      -1.040e+02         6.267e+00         1.245e-03         6.877e-02         3.546e+00        -3.411e+00  
-```
 ```
 Call:
 lm(formula = mpg ~ ., data = mechacarDF)
